@@ -55,6 +55,7 @@ o	So far, we’ve seen how to download Docker images, use them to run commands i
 
 Docker architecture
 Docker uses a client-server architecture. The Docker client talks to the Docker daemon, which does the heavy lifting of building, running, and distributing your Docker containers. The Docker client and daemon can run on the same system, or you can connect a Docker client to a remote Docker daemon. The Docker client and daemon communicate using a REST API, over UNIX sockets or a network interface. Another Docker client is Docker Compose, that lets you work with applications consisting of a set of containers.
+  
    ![preview](/images/7.png)
 
 ### DAY2
@@ -73,7 +74,7 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
    npm start
    ```
 
-   ![preview](/images/8.png)
-   ![preview](/images/9.png)
-   ![preview](/images/10.png)
-   ![preview](/images/11.png)
+ ![preview](/images/8.png)
+ ![preview](/images/9.png)
+ ![preview](/images/10.png)
+ ![preview](/images/11.png)
