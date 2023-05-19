@@ -6,7 +6,7 @@
   
   2 $ docker images know the image size
 
-    ![ref](/images/2.PNG)
+    ![refer](/images/2.PNG)
   
      -- hello-world   latest    9c7a54a9a43c   2 weeks ago   13.3kB
   3 
