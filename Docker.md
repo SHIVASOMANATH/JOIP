@@ -37,6 +37,7 @@ DOCKER JOIP TASK
    ````
 
    ![preview](/images/5.PNG)
+   ![preview](/images/6.png)
 
 ### command 5
   * 5. Explain what happens when you run the docker container
