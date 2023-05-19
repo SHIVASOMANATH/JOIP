@@ -33,6 +33,17 @@ DOCKER JOIP TASK
    $ docker container unpause nginx1
    $ docker container stop nginx1
    $ docker container start nginx1
+   $ docker container rm -f nginx1
    ````
+
    ![preview](/images/5.PNG)
-   
+
+### command 5
+  * 5. Explain what happens when you run the docker container
+
+o	The docker run command creates running containers from images and can run commands inside them.
+o	When using the docker run command, a container can run a default action (if it has one), a user specified action, or a shell to be used interactively.   
+o	The docker pull command downloads Docker images from the internet, From docker hub
+o	The docker image command lists Docker images that are (now) on your computer
+
+o	So far, we’ve seen how to download Docker images, use them to run commands inside running containers, and even how to explore a running container from the inside. Next, we’ll take a closer look at all the different kinds of Docker images that are out there.
