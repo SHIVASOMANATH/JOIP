@@ -4,11 +4,10 @@ DOCKER JOIP TASK
  * Run Hello World docker container and observe the container status
 ### command 1
 `$ docker container run -d -P --name Hello hello-world`
-
-   $ docker container ls /
-     
+   ```
+   $ docker container ls 
    $ docker container ls -a
-  
+  ```
    ![refer](/images/1.PNG)
 
 ### command 2  
