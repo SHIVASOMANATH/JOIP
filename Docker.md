@@ -81,3 +81,23 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
    ![preview](/images/10.PNG)
    ![preview](/images/11.PNG)
    ![preview](/images/9.PNG)
+
+  `Dockerfile`
+  
+FROM node:latest
+LABEL author="somanath" project="mysoul" organization="sai priya"
+RUN apt update && apt install git -y
+RUN git clone https://github.com/Azure-Samples/js-e2e-express-server.git
+RUN cd js-e2e-express-server/ apt install npm -y && npm install
+EXPOSE 3000
+ENV TEST="default"
+CMD ["npm","start"]
+
+ ```
+  docker image build -t name:1.0 .
+  docker image ls
+  docker container run -d -P --name expressjs name:1.0
+  docker container run -d -P --name expressjs1 name:1.0 sleep 1d
+```
+![preview](/images/12.PNG)
+![preview](/images/13.PNG)
