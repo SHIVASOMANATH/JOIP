@@ -66,7 +66,7 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 
    ## Manual Method
    
-   ``````
+   ```
    docker container run -it -p 32456:3000 node:latest
    git clone https://github.com/Azure-Samples/js-e2e-express-server.git
    ls
