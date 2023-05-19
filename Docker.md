@@ -85,12 +85,11 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
   `Dockerfile`
  ``` 
 FROM node:latest
-LABEL author="somanath" project="mysoul" organization="sai priya"
+LABEL author="somanath" project="nodejs" organization="expressjs"
 RUN apt update && apt install git -y
 RUN git clone https://github.com/Azure-Samples/js-e2e-express-server.git
 RUN cd js-e2e-express-server/ apt install npm -y && npm install
 EXPOSE 3000
-ENV TEST="default"
 CMD ["npm","start"]
 ```
  ```
@@ -101,3 +100,58 @@ CMD ["npm","start"]
 ```
 ![preview](/images/12.PNG)
 ![preview](/images/13.PNG)
+
+### DAY3
+  
+  ## task1
+  
+  * create a MySQL dB container from official MySQL image
+```
+  docker container run -d --name mysqldb -v mysqldb:/var/lib/mysql -P -e MYSQL_ROOT_PASSWORD=rootroot -e MYSQL_DATABASE=employees -e MYSQL_USER=root -e MYSQL_PASSWORD=rootroot mysql
+```
+  ![preview](/images/14.PNG)
+
+  ## task2
+
+  * Login into SQL container and create table
+
+  `docker container exec -it mysqldb mysql --password=rootroot`
+
+   ![preview](/images/15.PNG)
+```
+  show databases;
+  use employees;
+
+CREATE TABLE Persons (
+    PersonID int,
+    LastName varchar(255),
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+```
+    ![preview](/images/16.PNG)
+
+`Insert into Persons Values (1,'test','test', 'test', 'test'); Insert into Persons Values (1,'test','test', 'test', 'test');Insert into Persons Values (1,'test','test', 'test', 'test');Insert into Persons Values (1,'test','test', 'test', 'test');`
+
+`exit;`
+  ## task3
+  
+  * try to create a persisted volume in MYSQL container and mount that to other 
+
+now delete container and crate new container
+
+ ` docker container run -d --name mysqldb --mount "source=mysqldb,target=/var/lib/mysql,type=volume" -P -e MYSQL_ROOT_PASSWORD=rootroot -e MYSQL_DATABASE=employees -e MYSQL_USER=qtdevops -e MYSQL_PASSWORD=rootroot mysql`
+
+ volume mount we can check data by executing command 
+
+   `docker container exec -it mysqldb mysql --password=rootroot`
+ ```
+ show databases;
+  use employees;
+ ```
+`Select * from Persons;`
+
+ we are observed dat mounted to container
+  ![preview](/images/17.PNG)
+
