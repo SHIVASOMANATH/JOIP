@@ -59,9 +59,12 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
    ![preview](/images/7.png)
 
 ### DAY2
+  
+  ## task1 
+
   * Write a Docker file for NodeJS application -  
 
-  ## Manual Method
+   ## Manual Method
    
    ``````
    docker container run -it -p 32456:3000 node:latest
