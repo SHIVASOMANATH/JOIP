@@ -1,6 +1,10 @@
 * 1 Run Hello World docker container and observe the container status
+
      command execution $ docker container run -d -P --name Hello hello-world
-      $ docker container ls / $ docker container ls -a
+
+     $ docker container ls /
+     
+      $ docker container ls -a
   
      ![refer](/images/1.PNG)
   
