@@ -130,11 +130,12 @@ CREATE TABLE Persons (
     City varchar(255)
 );
 ```
-    ![preview](/images/16.PNG)
+   ![preview](/images/16.PNG)
+ ```  
+Insert into Persons Values (1,'test','test', 'test', 'test'); Insert into Persons Values (1,'test','test', 'test', 'test');Insert into Persons Values (1,'test','test', 'test', 'test');Insert into Persons Values (1,'test','test', 'test', 'test');
+ ```
+exit;
 
-`Insert into Persons Values (1,'test','test', 'test', 'test'); Insert into Persons Values (1,'test','test', 'test', 'test');Insert into Persons Values (1,'test','test', 'test', 'test');Insert into Persons Values (1,'test','test', 'test', 'test');`
-
-`exit;`
   ## task3
   
   * try to create a persisted volume in MYSQL container and mount that to other 
@@ -152,6 +153,6 @@ now delete container and crate new container
  ```
 `Select * from Persons;`
 
- we are observed dat mounted to container
+ we are observed data mounted to container
   ![preview](/images/17.PNG)
 
