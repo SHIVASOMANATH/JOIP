@@ -72,7 +72,8 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
    npm install
    npm start
    ```
-    ![preview](/images/8.png)
-    ![preview](/images/9.png)
-    ![preview](/images/10.png)
-    ![preview](/images/11.png)
+
+   ![preview](/images/8.png)
+   ![preview](/images/9.png)
+   ![preview](/images/10.png)
+   ![preview](/images/11.png)
