@@ -28,3 +28,11 @@ DOCKER JOIP TASK
 
 ### command 4
  * Explain docker container lifecycle
+   ```
+   $ docker container pause nginx1
+   $ docker container unpause nginx1
+   $ docker container stop nginx1
+   $ docker container start nginx1
+   ````
+   ![preview](/images/5.PNG)
+   
