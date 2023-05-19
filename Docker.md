@@ -1,12 +1,15 @@
-* 1 Run Hello World docker container and observe the container status
+DOCKER JOIP TASK
+----------------
+### DAY1
+ * Run Hello World docker container and observe the container status
+### command 1
+`$ docker container run -d -P --name Hello hello-world`
 
-     command execution $ docker container run -d -P --name Hello hello-world
-
-     $ docker container ls /
+   $ docker container ls /
      
-      $ docker container ls -a
+   $ docker container ls -a
   
-     ![refer](/images/1.PNG)
+   ![refer](/images/1.PNG)
   
   2 $ docker images know the image size
 
