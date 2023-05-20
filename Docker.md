@@ -231,7 +231,7 @@ now delete container and crate new container
   # apt install apache2 -y
   # apt install php libapache2-mod-php -y
   # apache2 -version
-  service apache2 restart
+  # service apache2 restart
   * Restarting Apache httpd web server apache2
   # php -version
   # service apache2 start
@@ -240,6 +240,10 @@ now delete container and crate new container
   ![preview](/images/24.PNG) 
   ![preview](/images/26.PNG) 
   ![preview](/images/25.PNG) 
+
+* Apache Dockerfile
+
+
 
   * create a jenkins image by creating an own dockerfile
   * Create nop commerce and MySQL server and try to make them work by configuring
