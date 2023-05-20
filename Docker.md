@@ -185,10 +185,35 @@ now delete container and crate new container
     ## task3
 
   * Create a postgres container with username panoramic and password as trekking. Try logging an and show the databases (query for psql)
-     
 
+     ```
+   $ docker container run -d -P --name postgress -e POSTGRES_PASSWORD=trekking -e POSTGRES_USER=panoramic -e POSTGRES_DB=somanath postgres
 
-  * Try to create a docker file which run php info page,use ARG and ENV wherever appropriate on 1.Apache, 2.ngins
+   $ docker container exec -it postgress bin/bash
+
+    psql --help
+     ```
+    to create table  
+     ```  
+    root@eeb98fb8cab1:/# psql -U panoramic -W trekking -d somanath
+
+    somanath=# CREATE TABLE Persons ( PersonID int, LastName varchar(295), FirstName varchar(295), Address varchar(295), City varchar(295) );
+    
+    somanath=# Insert into Persons Values (1,'somanath','shiva','ramannapeta','yadadri');
+
+somanath=# Insert into Persons Values (2,'boaz','parakati','karnataka','hubli');
+
+somanath=# SELECT * from Persons;
+ personid | lastname | firstname |   address   |  city
+----------+----------+-----------+-------------+---------
+        1 | somanath | shiva     | ramannapeta | yadadri
+        2 | boaz     | parakati  | karnataka   | hubli
+    SELECT * from Persons;
+     ```
+    ![preview](/images/21.PNG)
+    ![preview](/images/22.PNG)
+
+  * Try to create a docker file which run php info page,use ARG and ENV wherever appropriate on 1.Apache, 2.nginx
   * create a jenkins image by creating an own dockerfile
   * Create nop commerce and MySQL server and try to make them work by configuring
 
