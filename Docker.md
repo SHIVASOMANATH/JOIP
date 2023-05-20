@@ -138,7 +138,7 @@ exit;
 
   ## task3
   
-  * try to create a persisted volume in MYSQL container and mount that to other 
+  * try to create a pers isted volume in MYSQL container and mount that to other 
 
 now delete container and crate new container
 
@@ -155,4 +155,34 @@ now delete container and crate new container
 
  we are observed data mounted to container
   ![preview](/images/17.PNG)
+
+### DAY4
+
+  ## task1
+
+  * Create an alpine container in interactive mode and install python
+    `$ docker container run -it -p 34567:8080 --name alpine1 alpine:latest`
+
+    `/ # apk add python3`
+     ![preview](/images/18.PNG)
+
+  * Create a ubuntu container with sleep 1d and then login using exec and install python
+    ```
+     $ docker container run -d -P --name ubuntu1 ubuntu sleep 1d
+     $ docker container exec -it ubuntu1 bin/bash
+     # apt update
+     # apt install net-tools
+     # apt install python3
+     # python3 --version
+    ``` 
+       ![preview](/images/19.PNG)
+       ![preview](/images/20.PNG)
+
+  * Createa postgres container with username panoramic and password as trekking. Try logging an and show the databases appr(query for psql)
+  * Try to create a docker file which run php info page,use ARG and ENV wherever appropriate on 1.Apache, 2.ngins
+  * create a jenkins image by creating an own dockerfile
+  * Create nop commerce and MySQL server and try to make them work by configuring
+
+
+
 
