@@ -158,13 +158,17 @@ now delete container and crate new container
 
 ### DAY4
 
-  ## task1
+    ## task1
 
   * Create an alpine container in interactive mode and install python
+
     `$ docker container run -it -p 34567:8080 --name alpine1 alpine:latest`
 
-    `/ # apk add python3`
+    `# apk add python3`
+
      ![preview](/images/18.PNG)
+
+    ## task2
 
   * Create a ubuntu container with sleep 1d and then login using exec and install python
     ```
@@ -178,7 +182,12 @@ now delete container and crate new container
        ![preview](/images/19.PNG)
        ![preview](/images/20.PNG)
 
-  * Createa postgres container with username panoramic and password as trekking. Try logging an and show the databases appr(query for psql)
+    ## task3
+
+  * Create a postgres container with username panoramic and password as trekking. Try logging an and show the databases (query for psql)
+     
+
+
   * Try to create a docker file which run php info page,use ARG and ENV wherever appropriate on 1.Apache, 2.ngins
   * create a jenkins image by creating an own dockerfile
   * Create nop commerce and MySQL server and try to make them work by configuring
