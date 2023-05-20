@@ -222,9 +222,24 @@ now delete container and crate new container
 
   * Try to create a docker file which run php info page,use ARG and ENV wherever appropriate on 1.Apache, 2.nginx
 
-
-sudo apt install php libapache2-mod-php
-
+* Apache Manual method
+  
+  ```
+  $ docker container run -d -p 34567:80 --name ubuntu1 ubuntu sleep 1d
+  $ docker container exec -it ubuntu1 bin/bash
+  # apt update
+  # apt install apache2 -y
+  # apt install php libapache2-mod-php -y
+  # apache2 -version
+  service apache2 restart
+  * Restarting Apache httpd web server apache2
+  # php -version
+  # service apache2 start
+  # echo "<?php phpinfo(); ?>" > /var/www/html/info.php
+  ```
+  ![preview](/images/24.PNG) 
+  ![preview](/images/26.PNG) 
+  ![preview](/images/25.PNG) 
 
   * create a jenkins image by creating an own dockerfile
   * Create nop commerce and MySQL server and try to make them work by configuring
