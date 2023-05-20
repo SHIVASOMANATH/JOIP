@@ -212,11 +212,12 @@ now delete container and crate new container
      ```
   * show data base 
 
-    somanath=# \l   
+    somanath=# \l  
 
     ![preview](/images/21.PNG)
     ![preview](/images/22.PNG)
     ![preview](/images/23.PNG)
+
 
   * Try to create a docker file which run php info page,use ARG and ENV wherever appropriate on 1.Apache, 2.nginx
   * create a jenkins image by creating an own dockerfile
