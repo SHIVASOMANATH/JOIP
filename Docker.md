@@ -201,11 +201,11 @@ now delete container and crate new container
     
     somanath=# Insert into Persons Values (1,'somanath','shiva','ramannapeta','yadadri');
 
-somanath=# Insert into Persons Values (2,'boaz','parakati','karnataka','hubli');
+    somanath=# Insert into Persons Values (2,'boaz','parakati','karnataka','hubli');
 
-somanath=# SELECT * from Persons;
- personid | lastname | firstname |   address   |  city
-----------+----------+-----------+-------------+---------
+    somanath=# SELECT * from Persons;
+    personid | lastname | firstname |   address   |  city
+    ----------+----------+-----------+-------------+---------
         1 | somanath | shiva     | ramannapeta | yadadri
         2 | boaz     | parakati  | karnataka   | hubli
     SELECT * from Persons;
