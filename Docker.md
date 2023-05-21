@@ -253,20 +253,24 @@ now delete container and crate new container
     EXPOSE 80
     CMD [ "apache2ctl","-D","FOREGROUND" ]
 ```
-   I have put ARG DEBIAN_FRONTEN
-   D=noninteractive in the beginning of the Dockerfile to avoid debconf warnings while building.
+   I have put ARG DEBIAN_FRONTEND=noninteractive in the beginning of the Dockerfile to avoid debconf warnings while building.
 
-  ![preview](/images/27.PNG)
   ![preview](/images/28.PNG)
   ![preview](/images/29.PNG)
   ![preview](/images/30.PNG)
+  
+
+* Nginx Manual method
+
+
+
+
   
   
 
 
   * create a jenkins image by creating an own dockerfile
   * Create nop commerce and MySQL server and try to make them work by configuring
-
 
 
 
