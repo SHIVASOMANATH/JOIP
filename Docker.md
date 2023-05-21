@@ -243,6 +243,32 @@ now delete container and crate new container
 
 * Apache Dockerfile
 
+```
+FROM ubuntu
+LABEL author="somanath" project="sun" oraganization="qtdevops"
+ARG DEBIAN_FRONTEND=noninteractive 
+ARG user=apache
+ARG group=apache
+ARG uid=1000
+ARG gid=1000
+RUN apt update && apt install apache2 -y
+RUN apt install php libapache2-mod-php -y
+RUN groupadd -g ${gid} ${group} \
+    && useradd -u ${uid} -g ${gid} -m -s /bin/bash ${user}
+RUN echo "<?php phpinfo(); ?>" >> /var/www/html/info.php
+EXPOSE 80
+ENV TEST="default"
+CMD [ "apache2ctl","-D","FOREGROUND" ]
+```
+   I have put ARG DEBIAN_FRONTEN
+   D=noninteractive in the beginning of the Dockerfile to avoid debconf warnings while building.
+
+  ![preview](/images/27.PNG)
+  ![preview](/images/28.PNG)
+  ![preview](/images/29.PNG)
+  ![preview](/images/30.PNG)
+  
+  
 
 
   * create a jenkins image by creating an own dockerfile
