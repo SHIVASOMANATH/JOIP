@@ -8,14 +8,14 @@ DOCKER JOIP TASK
    $ docker container ls 
    $ docker container ls -a
   ```
-   ![refer](/images/1.PNG)
+   ![preview](/JOIP/images/1.PNG)
 
 ### task 2  
  *  Check the docker images and write down the size of hello-world images
 
   `$ docker images`
 
-   ![refer](/images/2.PNG)
+   ![preview](/JOIP//images/2.PNG)
   
 --- hello-world   latest    9c7a54a9a43c   2 weeks ago   13.3kB
 
@@ -23,8 +23,9 @@ DOCKER JOIP TASK
  * Run the nginx container with name as nginx1 and expose 8080 port on docker host 
    
    `$ docker container run -d -p 8080:80 --name nginx1 nginx`
-   ![preview](/images/3.PNG)
-   ![preview](/images/4.PNG)
+
+   ![preview](/JOIP//images/3.PNG)
+   ![preview](/JOIP//images/4.PNG)
 
 ### task 4
  * Explain docker container lifecycle
@@ -36,8 +37,8 @@ DOCKER JOIP TASK
    $ docker container rm -f nginx1
    ````
 
-   ![preview](/images/5.PNG)
-   ![preview](/images/6.png)
+   ![preview](/JOIP//images/5.PNG)
+   ![preview](/JOIP//images/6.png)
 
 ### task 5
   * Explain what happens when you run the docker container
@@ -56,7 +57,7 @@ o	So far, we’ve seen how to download Docker images, use them to run commands i
 Docker architecture
 Docker uses a client-server architecture. The Docker client talks to the Docker daemon, which does the heavy lifting of building, running, and distributing your Docker containers. The Docker client and daemon can run on the same system, or you can connect a Docker client to a remote Docker daemon. The Docker client and daemon communicate using a REST API, over UNIX sockets or a network interface. Another Docker client is Docker Compose, that lets you work with applications consisting of a set of containers.
   
-   ![preview](/images/7.png)
+   ![preview](/JOIP//images/7.png)
 
 ### DAY2
   
@@ -75,93 +76,16 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
    npm install
    npm start
    ```
-
-   ![preview](/images/8.PNG)
-   ![preview](/images/10.PNG)
-   ![preview](/images/11.PNG)
-   ![preview](/images/9.PNG)
+   ![preview](/JOIP//images/8.PNG)
+   ![preview](/JOIP//images/10.PNG)
+   ![preview](/JOIP//images/11.PNG)
+   ![preview](/JOIP//images/9.PNG)
 
   `Dockerfile`
- ``` 
-F To install the latest stable versions of Docker CLI, Docker Engine, and their
-# dependencies:
-# Docker installation
-----------------------
-# 1. download the script
-#
-#   $ curl -fsSL https://get.docker.com -o install-docker.sh
-#
-# 2. verify the script's content
-#
-#   $ cat install-docker.sh
-#
-# 3. run the script with --dry-run to verify the steps it executes
-#
-#   $ sh install-docker.sh --dry-run
-#
-# 4. run the script either as root, or using sudo to perform the installation.
-#  $ sudo sh install-docker.sh
-#user mode
-----------
-# sudo usermod -aG docker ubuntu
-rootuser
---------
-# sudo -i
-go language
------------
-# wget https://storage.googleapis.com/golang/getgo/installer_linux
-# chmod +x ./installer_linux
-# ./installer_linux
-# source ~/.bash_profile
-cri-dockered  gitclone
-----------------------
-# git clone https://github.com/Mirantis/cri-dockerd.git
-# cd cri-dockerd
-# create bin directory
-----------------------
-# mkdir bin
-# go build -o bin/cri-dockerd
-
-# mkdir -p /usr/local/bin
-# install -o root -g root -m 0755 bin/cri-dockerd /usr/local/bin/cri-dockerd
-# cp -a packaging/systemd/* /etc/systemd/system
-# sed -i -e 's,/usr/bin/cri-dockerd,/usr/local/bin/cri-dockerd,' /etc/systemd/system/cri-docker.service
-# systemctl daemon-reload
-# systemctl enable cri-docker.service
-# systemctl enable --now cri-docker.socket
-## cd ~
-##
-installation kubadm, kubectl, kubelet 
--------------------------------------
-# sudo apt-get update
-# sudo apt-get install -y apt-transport-ht
-# curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-archive-keyring.gpg
-# echo "deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
-# sudo apt-get update
-# sudo apt-get install -y kubelet kubeadm kubectl
-# sudo apt-mark hold kubelet kubeadm kubectl
-now create cluster from masternode
-----------------------------------
-# kubeadm init --pod-network-cidr "10.244.0.0/16" --cri-socket "unix:///var/run/cri-dockerd.sock"
-exit
-
-  mkdir -p $HOME/.kube
-  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-  sudo chown $(id -u):$(id -g) $HOME/.kube/config
-
-  kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
-
-  Node !:::::
-
-kubeadm join 172.31.15.103:6443 --token h81cit.wlihjl6k0jognj9w \
-        --cri-socket unix:///var/run/cri-dockerd.sock \
-        --discovery-token-ca-cert-hash sha256:835ec21ec52e2eb8621dbaec3534f9c02d0bb59dc9f3d70a3df28d1cc1b56a1b
-
-
-
-
-
-ABEL author="somanath" project="nodejs" organization="expressjs"
+ ```docker
+  
+FROM 
+LABEL author="somanath" project="nodejs" organization="expressjs"
 RUN apt update && apt install git -y
 RUN git clone https://github.com/Azure-Samples/js-e2e-express-server.git
 RUN cd js-e2e-express-server/ apt install npm -y && npm install
@@ -174,8 +98,8 @@ CMD ["npm","start"]
   docker container run -d -P --name expressjs name:1.0
   docker container run -d -P --name expressjs1 name:1.0 sleep 1d
 ```
-![preview](/images/12.PNG)
-![preview](/images/13.PNG)
+![preview](/JOIP//images/12.PNG)
+![preview](/JOIP//images/13.PNG)
 
 ### DAY3
   
@@ -185,7 +109,7 @@ CMD ["npm","start"]
 ```
   docker container run -d --name mysqldb -v mysqldb:/var/lib/mysql -P -e MYSQL_ROOT_PASSWORD=rootroot -e MYSQL_DATABASE=employees -e MYSQL_USER=root -e MYSQL_PASSWORD=rootroot mysql
 ```
-  ![preview](/images/14.PNG)
+  ![preview](/JOIP//images/14.PNG)
 
   ## task2
 
@@ -193,7 +117,7 @@ CMD ["npm","start"]
 
   `docker container exec -it mysqldb mysql --password=rootroot`
 
-   ![preview](/images/15.PNG)
+   ![preview](/JOIP//images/15.PNG)
 ```
   show databases;
   use employees;
@@ -206,7 +130,7 @@ CREATE TABLE Persons (
     City varchar(255)
 );
 ```
-   ![preview](/images/16.PNG)
+   ![preview](/JOIP//images/16.PNG)
  ```  
 Insert into Persons Values (1,'test','test', 'test', 'test'); Insert into Persons Values (1,'test','test', 'test', 'test');Insert into Persons Values (1,'test','test', 'test', 'test');Insert into Persons Values (1,'test','test', 'test', 'test');
  ```
@@ -230,7 +154,7 @@ now delete container and crate new container
 `Select * from Persons;`
 
  we are observed data mounted to container
-  ![preview](/images/17.PNG)
+  ![preview](/JOIP//images/17.PNG)
 
 ### DAY4
 
@@ -242,7 +166,7 @@ now delete container and crate new container
 
     `# apk add python3`
 
-     ![preview](/images/18.PNG)
+     ![preview](/JOIP//images/18.PNG)
 
     ## task2
 
@@ -255,17 +179,17 @@ now delete container and crate new container
      # apt install python3
      # python3 --version
     ``` 
-       ![preview](/images/19.PNG)
-       ![preview](/images/20.PNG)
+       ![preview](/JOIP//images/19.PNG)
+       ![preview](/JOIP//images/20.PNG)
 
     ## task3
 
   * Create a postgres container with username panoramic and password as trekking. Try logging an and show the databases (query for psql)
 
-     ```
-   $ docker container run -d -P --name postgress -e POSTGRES_PASSWORD=trekking -e POSTGRES_USER=panoramic -e POSTGRES_DB=somanath postgres
+  `
+   $ docker container run -d -P --name postgress -e POSTGRES_PASSWORD=trekking -e POSTGRES_USER=panoramic -e POSTGRES_DB=somanath postgres`
 
-   $ docker container exec -it postgress bin/bash
+   `$ docker container exec -it postgress bin/bash`
 
     psql --help
      ```
@@ -290,9 +214,9 @@ now delete container and crate new container
 
     somanath=# \l  
 
-    ![preview](/images/21.PNG)
-    ![preview](/images/22.PNG)
-    ![preview](/images/23.PNG)
+    ![preview](/JOIP//images/21.PNG)
+    ![preview](/JOIP//images/22.PNG)
+    ![preview](/JOIP//images/23.PNG)
 
     ## task4
 
@@ -313,9 +237,9 @@ now delete container and crate new container
   # service apache2 start
   # echo "<?php phpinfo(); ?>" > /var/www/html/info.php
   ```
-  ![preview](/images/24.PNG) 
-  ![preview](/images/26.PNG) 
-  ![preview](/images/25.PNG) 
+  ![preview](/JOIP//images/24.PNG) 
+  ![preview](/JOIP//images/26.PNG) 
+  ![preview](/JOIP//images/25.PNG) 
 
 * Apache Dockerfile
 
@@ -331,9 +255,9 @@ now delete container and crate new container
 ```
    I have put ARG DEBIAN_FRONTEND=noninteractive in the beginning of the Dockerfile to avoid debconf warnings while building.
 
-  ![preview](/images/28.PNG)
-  ![preview](/images/29.PNG)
-  ![preview](/images/30.PNG)
+  ![preview](/JOIP//images/28.PNG)
+  ![preview](/JOIP//images/29.PNG)
+  ![preview](/JOIP//images/30.PNG)
 
 
 * Nginx Manual method
