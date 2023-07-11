@@ -8,14 +8,14 @@ DOCKER JOIP TASK
    $ docker container ls 
    $ docker container ls -a
   ```
-   ![preview](/images/1.PNG)
+   ![preview](/JOIP/images/1.PNG)
 
 ### task 2  
  *  Check the docker images and write down the size of hello-world images
 
   `$ docker images`
 
-   ![preview](/images/2.PNG)
+   ![preview](/JOIP/images/2.PNG)
   
 --- hello-world   latest    9c7a54a9a43c   2 weeks ago   13.3kB
 
@@ -24,8 +24,8 @@ DOCKER JOIP TASK
    
    `$ docker container run -d -p 8080:80 --name nginx1 nginx`
 
-   ![preview](/images/3.PNG)
-   ![preview](/images/4.PNG)
+   ![preview](/JOIP/images/3.PNG)
+   ![preview](/JOIP/images/4.PNG)
 
 ### task 4
  * Explain docker container lifecycle
@@ -37,8 +37,8 @@ DOCKER JOIP TASK
    $ docker container rm -f nginx1
    ````
 
-   ![preview](/images/5.PNG)
-   ![preview](/images/6.png)
+   ![preview](/JOIP/images/5.PNG)
+   ![preview](/JOIP/images/6.png)
 
 ### task 5
   * Explain what happens when you run the docker container
@@ -57,7 +57,7 @@ o	So far, we’ve seen how to download Docker images, use them to run commands i
 Docker architecture
 Docker uses a client-server architecture. The Docker client talks to the Docker daemon, which does the heavy lifting of building, running, and distributing your Docker containers. The Docker client and daemon can run on the same system, or you can connect a Docker client to a remote Docker daemon. The Docker client and daemon communicate using a REST API, over UNIX sockets or a network interface. Another Docker client is Docker Compose, that lets you work with applications consisting of a set of containers.
   
-   ![preview](/images/7.png)
+   ![preview](/JOIP/images/7.png)
 
 ### DAY2
   
@@ -76,10 +76,10 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
    npm install
    npm start
    ```
-   ![preview](/images/8.PNG)
-   ![preview](/images/10.PNG)
-   ![preview](/images/11.PNG)
-   ![preview](/images/9.PNG)
+   ![preview](/JOIP/images/8.PNG)
+   ![preview](/JOIP/images/10.PNG)
+   ![preview](/JOIP/images/11.PNG)
+   ![preview](/JOIP/images/9.PNG)
 
   `Dockerfile`
  ```docker
@@ -98,8 +98,8 @@ CMD ["npm","start"]
   docker container run -d -P --name expressjs name:1.0
   docker container run -d -P --name expressjs1 name:1.0 sleep 1d
 ```
-![preview](/images/12.PNG)
-![preview](/images/13.PNG)
+![preview](/JOIP/images/12.PNG)
+![preview](/JOIP/images/13.PNG)
 
 ### DAY3
   
@@ -109,7 +109,7 @@ CMD ["npm","start"]
 ```
   docker container run -d --name mysqldb -v mysqldb:/var/lib/mysql -P -e MYSQL_ROOT_PASSWORD=rootroot -e MYSQL_DATABASE=employees -e MYSQL_USER=root -e MYSQL_PASSWORD=rootroot mysql
 ```
-  ![preview](/images/14.PNG)
+  ![preview](/JOIP/images/14.PNG)
 
   ## task2
 
@@ -117,7 +117,7 @@ CMD ["npm","start"]
 
   `docker container exec -it mysqldb mysql --password=rootroot`
 
-   ![preview](/images/15.PNG)
+   ![preview](/JOIP/images/15.PNG)
 ```
   show databases;
   use employees;
@@ -130,7 +130,7 @@ CREATE TABLE Persons (
     City varchar(255)
 );
 ```
-   ![preview](/images/16.PNG)
+   ![preview](/JOIP/images/16.PNG)
  ```  
 Insert into Persons Values (1,'test','test', 'test', 'test'); Insert into Persons Values (1,'test','test', 'test', 'test');Insert into Persons Values (1,'test','test', 'test', 'test');Insert into Persons Values (1,'test','test', 'test', 'test');
  ```
@@ -154,7 +154,7 @@ now delete container and crate new container
 `Select * from Persons;`
 
  we are observed data mounted to container
-  ![preview](/images/17.PNG)
+  ![preview](/JOIP/images/17.PNG)
 
 ### DAY4
 
@@ -166,7 +166,7 @@ now delete container and crate new container
 
     `# apk add python3`
 
-     ![preview](/images/18.PNG)
+     ![preview](/JOIP/images/18.PNG)
 
     ## task2
 
@@ -179,8 +179,8 @@ now delete container and crate new container
      # apt install python3
      # python3 --version
 ``
-       ![preview](/images/19.PNG)
-       ![preview](/images/20.PNG)
+       ![preview](/JOIP/images/19.PNG)
+       ![preview](/JOIP/images/20.PNG)
 
     ## task3
 
@@ -214,9 +214,9 @@ now delete container and crate new container
 
     somanath=# \l  
 
-    ![preview](/images/21.PNG)
-    ![preview](/images/22.PNG)
-    ![preview](/images/23.PNG)
+    ![preview](/JOIP/images/21.PNG)
+    ![preview](/JOIP/images/22.PNG)
+    ![preview](/JOIP/images/23.PNG)
 
     ## task4
 
@@ -237,9 +237,9 @@ now delete container and crate new container
   # service apache2 start
   # echo "<?php phpinfo(); ?>" > /var/www/html/info.php
   ```
-  ![preview](/images/24.PNG) 
-  ![preview](/images/26.PNG) 
-  ![preview](/images/25.PNG) 
+  ![preview](/JOIP/images/24.PNG) 
+  ![preview](/JOIP/images/26.PNG) 
+  ![preview](/JOIP/images/25.PNG) 
 
 * Apache Dockerfile
 
@@ -255,9 +255,9 @@ now delete container and crate new container
 ```
    I have put ARG DEBIAN_FRONTEND=noninteractive in the beginning of the Dockerfile to avoid debconf warnings while building.
 
-  ![preview](/images/28.PNG)
-   ![preview](/images/29.PNG)
-   ![preview](/images/30.PNG)
+  ![preview](/JOIP/images/28.PNG)
+   ![preview](/JOIP/images/29.PNG)
+   ![preview](/JOIP/images/30.PNG)
 
 
 * Nginx Manual method
